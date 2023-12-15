@@ -60,27 +60,7 @@ def googele_search():
     no_string = query.replace(" ", "")
     pywhatkit.search(no_string)
     speak("Done sir")
-def change_voice():
-    global cr
-    for i in range(k):
-        if(i != cr):
-            Assistant.setProperty('voice',voices[i].id)
-            Assistant.setProperty('rate', 180)
-            speak("Is it ok sir")
-            val = take_command();
-            if "ok" or "done" or "thik h" in val:
-                cr = i;
-                speak("Done sir")
-                break;
-            if(i == k-1 and val != "ok"):
-                Assistant.setProperty('voice',voices[cr].id)
-                Assistant.setProperty('rate', 180)
-                speak("There is no more voice in the system");
-                break;
-        if(i == k-1):
-                Assistant.setProperty('voice',voices[cr].id)
-                Assistant.setProperty('rate', 180)
-                speak("There is no more voice in the system");   
+
 def speak(audio):
     print("  ")
     Assistant.say(audio)
