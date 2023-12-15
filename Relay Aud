@@ -1,0 +1,75 @@
+#include<Servo.h>
+Servo s1;
+int bulb = 2;
+int bulb2 = 7;
+int led = 4;
+char value;
+int lr = 10;
+int fan = 5;
+int fan2 = 6;
+int sec = 8;
+int push = 10;
+
+void setup(){
+  digitalWrite(bulb,HIGH);
+  digitalWrite(bulb2,HIGH);
+  digitalWrite(sec,LOW);
+  digitalWrite(lr,HIGH);
+  digitalWrite(led,HIGH);
+  digitalWrite(fan,LOW);
+  digitalWrite(fan2,LOW);
+  Serial.begin(9600);
+  pinMode(push,INPUT);
+  pinMode(fan,OUTPUT);
+  pinMode(fan2,OUTPUT); 
+  pinMode(bulb, OUTPUT);
+  pinMode(bulb2, OUTPUT);
+  pinMode(sec,OUTPUT);
+  s1.attach(9);
+  
+
+}
+void loop(){
+   while (Serial.available() > 0) 
+    {
+      Serial.println(digitalRead(push));
+      if(digitalRead(push) == 1)
+        Serial.println("1");
+      value = Serial.read();
+      if(value == '5')
+        digitalWrite(sec,LOW);
+      if(value == '6')
+        digitalWrite(sec,HIGH);
+
+
+
+      if(value == '1')
+        digitalWrite(bulb,LOW);
+      else if(value == '0')
+        digitalWrite(bulb,HIGH);
+      if(value == '9')
+        digitalWrite(bulb2,LOW);
+      else if(value == '8')
+        digitalWrite(bulb2,HIGH);
+      if(value == '2'){
+        s1.attach(9);
+        s1.write(0);
+        delay(1000);
+        s1.write(180);
+        s1.detach();
+      }
+      else if(value == '3'){
+        s1.attach(9);
+        s1.write(180);
+        delay(1000);
+        s1.write(0);
+        s1.detach();
+      }
+      if(value == '4'){
+        digitalWrite(led,HIGH);
+
+      }
+
+
+    }
+}
