@@ -1,0 +1,91 @@
+{
+  "intents" : [
+    {
+      "tag": "greeting",
+      "patterns": ["hello", "hi computer","hey","computer"],
+      "responses": ["hello sir" , "hay sir"
+      ]
+    },{
+      "tag": "goodbye",
+      "patterns": ["bye", "see you later","exit","shutdown"
+      ],
+      "responses": ["bye sir" , "nice to talk to you sir"
+      ]
+    }, {
+      "tag": "time",
+      "patterns": ["what the time", "time ky ho rha h ","samay btao","time"
+      ],
+      "responses": ["time"
+      ]
+    }, {
+      "tag": "web",
+      "patterns": ["open the website","open web","website"],
+      "responses": ["web"
+      ]
+    },
+    {
+      "tag": "youtube",
+      "patterns": ["open the youtube","open youtube","youtube"],
+      "responses": ["youtube"
+      ]
+    },
+    {
+      "tag": "google",
+      "patterns": ["open the google","open google","google"],
+      "responses": ["google"
+      ]
+    },
+    {
+      "tag": "voice",
+      "patterns": ["change the voice","update voice","different voice"],
+      "responses": ["voice"
+      ]
+    },
+    {
+      "tag": "translate",
+      "patterns": ["translate kro","translate the sentence","translate"],
+      "responses": ["translate"
+      ]
+    },
+    {
+      "tag": "Browser",
+      "patterns": ["open Browser","Browser"],
+      "responses": ["Browser"]
+    }
+    ,{
+      "tag": "Automation",
+      "patterns": ["Turn on light","on light"],
+      "responses": ["onlight"]
+    },
+    {
+      "tag": "Automation2",
+      "patterns": ["Turn off light","off light"],
+      "responses": ["offlight"]
+    },
+    {
+      "tag": "Automation fan 1",
+      "patterns": ["Turn off fan","off fan"],
+      "responses": ["offan"]
+    },
+        {
+      "tag": "Automation fan 2",
+      "patterns": ["Turn on fan","off fan"],
+      "responses": ["onfan"]
+    },
+    {
+      "tag": "wishme",
+      "patterns": ["wish me","wish to sir","wish"],
+      "responses": ["wish"]
+    },
+    {
+      "tag": "Security",
+      "patterns": ["secure the room","security","lock the room"],
+      "responses": ["secure"]
+    }
+
+
+
+
+
+  ]
+}
